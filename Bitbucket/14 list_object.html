@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Belajar Vue </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body> 
+	<div id="app">
+		 	<li v-for="(value,key,index) of book">
+		 		{{ index+1 }}. {{ key }} : {{ value }} 
+		 	</li> 
+	</div>
+	<script> 
+	var vm = new Vue ({
+		el: '#app',
+		data :{	
+			book: { 
+			 id : 99,
+			 title : 'C++ Mencapai Titik High',
+			 description : 'Baca buku, belajar, nikah',
+			 authors : 'Aidil, MrBean',
+			 publish_year : 2018,
+			 price : 100000
+			} 
+		}	
+	}) 
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Belajar Vue </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body> 
+	<div id="app">
+		  <button v-on:click= "info ('selamat datang')">
+		  	Informasi
+		  </button> 
+	</div>
+	<script> 
+	var vm = new Vue ({
+		el: '#app',
+		data: { 
+			counter : 0   
+		},
+		methods: {
+			info (text) {
+				alert(text)
+			}
+		}   
+	})
+	</script>
+</body>
+</html>

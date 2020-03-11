@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Belajar Vue </title>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+</head>
+<body> 
+	<div id="app">
+		<form>
+		 <input type="radio" id="laravel" value="A" v-model="picked">
+				<label for="laravel">Laravel</label>
+				<br>
+				<input type="radio" id="vue" value="B" v-model="picked">
+				<label for="vue">Vue</label>
+				<br>
+				<input type="radio" id="laravelvue" value="AB" v-model="picked">
+				<label for="vue">Laravel&Vue</label>
+				<br>
+		<span>Pilihan Paket : {{ picked }}</span>
+				<br>
+				<br>
+		<select v-model="selected">
+			<option disabled value="">Pilih Salah Satu</option>
+			<option>Aidil</option>
+			<option>Kudil</option>
+			<option>Kuyam</option>
+		</select>
+		<span>Selected: {{ selected }}</span>
+				<br>
+				<br>
+		<select v-model="pilihan" multiple>
+			<option>Aidil</option>
+			<option>Kudil</option>
+			<option>Kuyam</option>
+		</select>
+		<br>
+		<span>Pilihan: {{ pilihan }}</span>
+				<br>
+				<br>		
+		<input type="checkbox" id="aidil" value="Aidil" v-model="checkedNames">
+		<label for="aidil">Aidil</label>
+		<input type="checkbox" id="kudil" value="Kudil" v-model="checkedNames">
+		<label for="kudil">Kudil</label>
+		<input type="checkbox" id="kuyam" value="Kuyam" v-model="checkedNames">
+		<label for="kuyam">Kuyam</label>
+		<br>
+		<span>Checked names: {{ checkedNames }}</span>
+				<br>
+				<br>
+		<input type="checkbox" id="checkbox" v-model="checked">
+		<label for="checkbox">{{ checked }}</label>			
+		</form>  
+	</div>
+	
+	<script> 
+	var vm = new Vue ({
+		el: '#app',
+		data:{ 
+			picked : "",
+			selected: "",
+			pilihan: "",
+			checkedNames:[],
+			checked:false
+		},
+	}) 
+	</script>
+</body>
+</html>
